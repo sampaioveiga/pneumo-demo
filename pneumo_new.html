@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Bootstrap Demo</title>
+  <style>
+    body {
+      background-color: darkgrey;
+    }
+
+    .pageContent { 
+      padding-top: 60px; 
+    }
+
+    .table-date {
+      background:ghostwhite;
+      font-weight: lighter;
+    }
+
+    .affix {
+      top: 60px;
+      width: 100%;
+      z-index: 9999 !important;
+    }
+
+    .chart div {
+      font: 10px sans-serif;
+      background-color: steelblue;
+      text-align: right;
+      padding: 3px;
+      margin: 1px;
+      color: white;
+    }
+
+    .affix + .container-fluid {
+      padding-top: 70px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js" integrity="sha256-hYXbQJK4qdJiAeDVjjQ9G0D6A0xLnDQ4eJI9dkm7Fpk=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and collapse button -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">BS-Demo</a>
+        <ul class="nav navbar-nav">
+          <li><a href="./pneumo.html">pneumo</a></li>
+          <li><a href="#">uci</a></li>
+        </ul>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- User nav -->
+        <ul class="nav navbar-nav navbar-right">
+          <li data-toggle="tooltip" data-placement="bottom" title="Goto User page"><a href="#">User name</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- Body page -->
+  <div class="container-fluid pageContent">
+    <div class="row">
+
+      <!-- patient identification -->
+      <nav class="navbar navbar-default" data-spy="affix" data-offset-top="60">
+        <div class="container-fluid">
+          <div class="nav navbar-nav navbar-left">
+            <a class="btn btn-success navbar-btn" href="./pneumo.html" role="button">Submeter</a>
+            <a class="btn btn-default navbar-btn" href="./pneumo.html" role="button">Cancelar</a>
+          </div>
+          <span class="navbar-right">
+            <p class="navbar-text text-info">Jorge Alfredo Mendes de Carvalho e Cunha</p>
+            <p class="navbar-text text-info">Age: 75 years</p>
+            <p class="navbar-text text-info">Processo: 18123456</p>
+          </span>
+        </div>
+      </nav>
+
+      <!-- left column -->
+      <div class="col-sm-4">
+
+        <!-- Consultas -->
+        <div class="panel panel-default">
+          <div class="panel-heading">Nova consulta</div>
+          <table class="table">
+              <tbody>
+                  <tr>
+                      <td>09/03/2018</td>
+                      <td>Enf. Fábio</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+        <!-- Parametros vitais -->
+        <div class="panel panel-default">
+          <div class="panel-heading">Parâmetros Vitais</div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Peso</td>
+                <td><input type="text" class="form-control"></td>
+                <td>Kg</td>
+              </tr>
+              <tr>
+                <td>Tensão arterial</td>
+                <td><input type="text" class="form-control"></td>
+                <td>mmHg</td>
+              </tr>
+              <tr>
+                <td>Pulso</td>
+                <td><input type="text" class="form-control"></td>
+                <td>bat/min</td>
+              </tr>
+              <tr>
+                <td>O2</td>
+                <td><input type="text" class="form-control"></td>
+                <td>%</td>
+              </tr>
+              <tr>
+                <td>PEF</td>
+                <td><input type="text" class="form-control"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Inaladores</td>
+                <td><div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Não
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="options" id="option2" autocomplete="off"> Sim
+                    </label>
+                  </div></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Medicação</div>
+          <div class="panel-body">
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+      
+        <!-- end left column -->
+      </div>
+
+      <!-- right column -->
+      <div class="col-sm-8">
+
+        <!-- Inaladores -->
+        <div class="panel panel-default">
+          <div class="panel-heading">Dispositivos inalatórios</div>
+          <div class="panel-body">
+          <div class="panel-group" id="dispositivos">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#dispositivos" href="#pressurizados">
+                      Pressurizados
+                    </a>
+                  </h4>
+                </div>
+                <div id="pressurizados" class="panel-collapse collapse">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>Ventilan (Salbutamol)</td>
+                        <td>
+                          <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default active">
+                              <input type="radio" name="options" id="option1" autocomplete="off" checked> Não
+                            </label>
+                            <label class="btn btn-default">
+                              <input type="radio" name="options" id="option2" autocomplete="off"> Sim
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-default active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Má
+                                </label>
+                                <label class="btn btn-default">
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> Razoável
+                                </label>
+                                <label class="btn btn-default">
+                                  <input type="radio" name="options" id="option3" autocomplete="off"> Boa
+                                </label>
+                              </div>
+                              <div class="btn-group" data-toggle="buttons">
+                                  <label class="btn btn-default active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Má
+                                  </label>
+                                  <label class="btn btn-default">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Razoável
+                                  </label>
+                                  <label class="btn btn-default">
+                                    <input type="radio" name="options" id="option3" autocomplete="off"> Boa
+                                  </label>
+                                </div>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td>Outro</td>
+                          <td>
+                            <input type="text" class="form-control" />
+                          </td>
+                          <td>
+                              
+                                <div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default">Má</button>
+                                  <button type="button" class="btn btn-default">Razoável</button>
+                                  <button type="button" class="btn btn-default">Boa</button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default">Má</button>
+                                  <button type="button" class="btn btn-default">Razoável</button>
+                                  <button type="button" class="btn btn-default">Boa</button>
+                                </div>
+                              
+                          </td>
+                        </tr>
+                      <tr>
+                          <td>Camaras expansoras</td>
+                          <td>
+                            <div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-default active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Não
+                              </label>
+                              <label class="btn btn-default">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> Sim
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                              <div class="btn-toolbar" role="toolbar" aria-label="...">
+                                <div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default">Má</button>
+                                  <button type="button" class="btn btn-default">Razoável</button>
+                                  <button type="button" class="btn btn-default">Boa</button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default">Má</button>
+                                  <button type="button" class="btn btn-default">Razoável</button>
+                                  <button type="button" class="btn btn-default">Boa</button>
+                                </div>
+                              </div>
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#dispositivos" href="#breezehaler">
+                    Breezehaler</a>
+                  </h4>
+                </div>
+                <div id="breezehaler" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <table class="table">
+                          <tbody>
+                            <tr>
+                              <td>Onbrez 150</td>
+                              <td>
+                                <div class="btn-group" data-toggle="buttons">
+                                  <label class="btn btn-default active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Não
+                                  </label>
+                                  <label class="btn btn-default">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Sim
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td>Onbrez 300</td>
+                                <td>
+                                  <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-default active">
+                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Não
+                                    </label>
+                                    <label class="btn btn-default">
+                                      <input type="radio" name="options" id="option2" autocomplete="off"> Sim
+                                    </label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                  <td>Tovanor</td>
+                                  <td>
+                                    <input type="text" class="form-control" />
+                                  </td>
+                                </tr>
+                          </tbody>
+                        </table>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#dispositivos" href="#collapse3">
+                    Handihaler</a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+      <!-- end left column -->
+      </div>
+
+      
+    </div>
+  </div>
+    
+  <script>
+    var data = [30, 86, 168, 281, 303, 365];
+    d3.select(".chart")
+      .selectAll("div")
+      .data(data)
+        .enter()
+        .append("div")
+        .style("width", function(d) { return d + 'px' })
+        .text(function(d) { return '$ ' + d; });
+  </script>
+</body>
+</html>
