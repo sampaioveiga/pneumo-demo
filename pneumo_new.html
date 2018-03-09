@@ -322,15 +322,40 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#dispositivos" href="#collapse3">
-                    Handihaler</a>
+                    <a data-toggle="collapse" data-parent="#dispositivos" href="#o_domicilio">
+                    Oxigenoterapia domiciliária</a>
                   </h4>
                 </div>
-                <div id="collapse3" class="panel-collapse collapse">
-                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.</div>
+                <div id="o_domicilio" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <table class="table">
+                          <tbody>
+                            <tr>
+                              <td>Vitalaire</td>
+                              <td>
+                                <div class="btn-group" data-toggle="buttons">
+                                  <label class="btn btn-default active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Não
+                                  </label>
+                                  <label class="btn btn-default">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Sim
+                                  </label>
+                                </div>
+                              </td>
+                              <td><input type="text" class="form-control" placeholder="débito"/></td>
+                              <td><input type="text" class="form-control" placeholder="nº horas"/></td>
+                              <td>
+                                  <div class="btn-group" role="group" aria-label="">
+                                      <button type="button" class="btn btn-default">Garrafa</button>
+                                      <button type="button" class="btn btn-default">Liquido</button>
+                                      <button type="button" class="btn btn-default">Concentrador</button>
+                                      <button type="button" class="btn btn-default">POC</button>
+                                    </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                      </table>
+                  </div>
                 </div>
               </div>
             </div>
