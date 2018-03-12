@@ -38,6 +38,13 @@
     .affix + .container-fluid {
       padding-top: 70px;
     }
+
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 2px;
+    }
+
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -77,23 +84,13 @@
   <div class="container-fluid pageContent">
     <div class="row">
 
-      <!-- patient identification -->
-      <nav class="navbar navbar-default" data-spy="affix" data-offset-top="60">
-        <div class="container-fluid">
-          <div class="nav navbar-nav navbar-left">
-              <a class="btn btn-primary navbar-btn" href="./pneumo_new.html" role="button">Nova ficha</a>
-          </div>
-          <span class="navbar-right">
-            <p class="navbar-text text-info">Jorge Alfredo Mendes de Carvalho e Cunha</p>
-            <p class="navbar-text text-info">Age: 75 years</p>
-            <p class="navbar-text text-info">Processo: 18123456</p>
-          </span>
-        </div>
-      </nav>
-
       <!-- left column -->
-      <div class="col-sm-4">
-
+      <div class="col-sm-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>TISS 28</h1>
+          </div>
+        </div>
         <!-- Consultas -->
         <div class="panel panel-default">
           <div class="panel-heading">Consultas</div>
@@ -102,115 +99,47 @@
             <tbody>
               <tr>
                 <td><button class="btn btn-info btn-xs">Editar</button></td>
-                <td>25/04/2017</td>
+                <td>13/04/2017</td>
                 <td>Enf. Abel</td>
               </tr>
               <tr>
                 <td><button class="btn btn-info btn-xs">Editar</button></td>
-                <td>12/04/2016</td>
+                <td>12/04/2017</td>
                 <td>Enf. António</td>
               </tr>
+              <tr>
+                  <td><button class="btn btn-info btn-xs">Editar</button></td>
+                  <td>11/04/2017</td>
+                  <td>Enf. Abel</td>
+                </tr>
+                <tr>
+                  <td><button class="btn btn-info btn-xs">Editar</button></td>
+                  <td>10/04/2017</td>
+                  <td>Enf. António</td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-info btn-xs">Editar</button></td>
+                    <td>9/04/2017</td>
+                    <td>Enf. Abel</td>
+                  </tr>
+                  <tr>
+                    <td><button class="btn btn-info btn-xs">Editar</button></td>
+                    <td>8/04/2017</td>
+                    <td>Enf. António</td>
+                  </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Parametros vitais -->
-        <div class="panel panel-default">
-          <div class="panel-heading">Parâmetros Vitais</div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Peso</th>
-                <th>TA</th>
-                <th>Pulso</th>
-                <th>O2</th>
-                <th>PEF</th>
-                <th>Inaladores</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>25/04/2017</td>
-                <td>xx</td>
-                <td>yy</td>
-                <td>zz</td>
-                <td>mm</td>
-                <td>nn</td>
-                <td>Sim</td>
-              </tr>
-              <tr>
-                <td>12/04/2016</td>
-                <td>ss</td>
-                <td>aa</td>
-                <td>ff</td>
-                <td>jj</td>
-                <td>ee</td>
-                <td>Não</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">Medicação</div>
-          <table class="table">
-            <thead></thead>
-            <tbody>
-              <tr>
-                <td>25/04/2017</td>
-                <td>Singulair 1xd</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      
+              
         <!-- end left column -->
       </div>
 
       <!-- right column -->
-      <div class="col-sm-8">
-        <!-- Inaladores -->
+      <div class="col-sm-9">
         <div class="panel panel-default">
-          <div class="panel-heading">Inaladores</div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Produto</th>
-                <th>Obs</th>
-                <th>Tecnica antes</th>
-                <th>Tecnica depois</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="table-date" colspan="4">25/04/2017</td>
-              </tr>
-              <tr>
-                <td>Ventilan (Salbutamol)</td>
-                <td>SOS</td>
-                <td>Má</td>
-                <td>Boa</td>
-              </tr>
-              <tr>
-                <td>Eklira(Aclidineo)</td>
-                <td>322ug/dose(2xd)</td>
-                <td>razoável</td>
-                <td>Boa</td>
-              </tr>
-              <tr>
-                <td class="table-date" colspan="4">12/04/2016</td>
-              </tr>
-              <tr>
-                <td>Maizar (Ultra Beta + Asmolavi) 50/250</td>
-                <td>2xd</td>
-                <td>Boa</td>
-                <td>Boa</td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="graph"></div>
         </div>
-
       <!-- end left column -->
       </div>
 
@@ -219,14 +148,52 @@
   </div>
     
   <script>
-    var data = [30, 86, 168, 281, 303, 365];
-    d3.select(".chart")
-      .selectAll("div")
-      .data(data)
-        .enter()
-        .append("div")
-        .style("width", function(d) { return d + 'px' })
-        .text(function(d) { return '$ ' + d; });
-  </script>
+      // set the dimensions and margins of the graph
+      var margin = {top: 20, right: 20, bottom: 30, left: 50},
+          width = 960 - margin.left - margin.right,
+          height = 500 - margin.top - margin.bottom;
+      // parse the date / time
+      var parseTime = d3.timeParse("%d-%b-%y");
+      // set the ranges
+      var x = d3.scaleTime().range([0, width]);
+      var y = d3.scaleLinear().range([height, 0]);
+      // define the line
+      var valueline = d3.line()
+          .x(function(d) { return x(d.date); })
+          .y(function(d) { return y(d.close); });
+      // append the svg obgect to the body of the page
+      // appends a 'group' element to 'svg'
+      // moves the 'group' element to the top left margin
+      var svg = d3.select("#graph").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+      // Get the data
+      d3.csv("data.csv", function(error, data) {
+        if (error) throw error;
+        // format the data
+        data.forEach(function(d) {
+            d.date = parseTime(d.date);
+            d.close = +d.close;
+        });
+        // Scale the range of the data
+        x.domain(d3.extent(data, function(d) { return d.date; }));
+        y.domain([0, d3.max(data, function(d) { return d.close; })]);
+        // Add the valueline path.
+        svg.append("path")
+            .data([data])
+            .attr("class", "line")
+            .attr("d", valueline);
+        // Add the X Axis
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+        // Add the Y Axis
+        svg.append("g")
+            .call(d3.axisLeft(y));
+      });
+      </script>
 </body>
 </html>

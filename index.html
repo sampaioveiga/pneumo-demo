@@ -58,7 +58,7 @@
         <a class="navbar-brand" href="#">BS-Demo</a>
         <ul class="nav navbar-nav">
           <li><a href="./pneumo.html">pneumo</a></li>
-          <li><a href="#">uci</a></li>
+          <li><a href="./uci.html">uci</a></li>
         </ul>
       </div>
 
@@ -91,131 +91,36 @@
         </div>
       </nav>
 
-      <!-- left column -->
-      <div class="col-sm-4">
-
-        <!-- Consultas -->
+      <!-- center column -->
+      <div class="col-sm-8 col-sm-offset-2">
         <div class="panel panel-default">
-          <div class="panel-heading">Consultas</div>
-          <table class="table">
-            <thead></thead>
-            <tbody>
-              <tr>
-                <td><button class="btn btn-info btn-xs">Editar</button></td>
-                <td>25/04/2017</td>
-                <td>Enf. Abel</td>
-              </tr>
-              <tr>
-                <td><button class="btn btn-info btn-xs">Editar</button></td>
-                <td>12/04/2016</td>
-                <td>Enf. António</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="panel panel-heading">
+              
+          </div>
+          <div class="panel-body">
+              <input type="text" class="form-control" placeholder="Nome do doente" />
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Última atualização</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jorge Alfredo Mendes de Carvalho e Cunha</td>
+                  <td>25/04/2017</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-
-        <!-- Parametros vitais -->
-        <div class="panel panel-default">
-          <div class="panel-heading">Parâmetros Vitais</div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Peso</th>
-                <th>TA</th>
-                <th>Pulso</th>
-                <th>O2</th>
-                <th>PEF</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>25/04/2017</td>
-                <td>xx</td>
-                <td>yy</td>
-                <td>zz</td>
-                <td>mm</td>
-                <td>nn</td>
-              </tr>
-              <tr>
-                <td>12/04/2016</td>
-                <td>ss</td>
-                <td>aa</td>
-                <td>ff</td>
-                <td>jj</td>
-                <td>ee</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      
-        <!-- end left column -->
-      </div>
-
-      <!-- right column -->
-      <div class="col-sm-8">
-        <!-- Inaladores -->
-        <div class="panel panel-default">
-          <div class="panel-heading">Dispositivos inalatórios</div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Produto</th>
-                <th>Obs</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="table-date" colspan="2">25/04/2017</td>
-              </tr>
-              <tr>
-                <td>Ventilan (Salbutamol)</td>
-                <td>SOS</td>
-              </tr>
-              <tr>
-                <td>Eklira(Aclidineo)</td>
-                <td>322ug/dose(2xd)</td>
-              </tr>
-              <tr>
-                <td class="table-date" colspan="2">12/04/2016</td>
-              </tr>
-              <tr>
-                <td>Maizar (Ultra Beta + Asmolavi) 50/250</td>
-                <td>2xd</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="panel panel-default">
-          <div class="panel-heading">Medicação</div>
-          <table class="table">
-            <thead></thead>
-            <tbody>
-              <tr>
-                <td>25/04/2017</td>
-                <td>Singulair 1xd</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-      <!-- end left column -->
+      <!-- end center column -->
       </div>
 
       
     </div>
   </div>
-    
-  <script>
-    var data = [30, 86, 168, 281, 303, 365];
-    d3.select(".chart")
-      .selectAll("div")
-      .data(data)
-        .enter()
-        .append("div")
-        .style("width", function(d) { return d + 'px' })
-        .text(function(d) { return '$ ' + d; });
-  </script>
+
 </body>
 </html>

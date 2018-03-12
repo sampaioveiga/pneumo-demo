@@ -58,7 +58,7 @@
         <a class="navbar-brand" href="#">BS-Demo</a>
         <ul class="nav navbar-nav">
           <li><a href="./pneumo.html">pneumo</a></li>
-          <li><a href="#">uci</a></li>
+          <li><a href="./uci.html">uci</a></li>
         </ul>
       </div>
 
@@ -136,7 +136,7 @@
               <tr>
                 <td>PEF</td>
                 <td><input type="text" class="form-control"></td>
-                <td></td>
+                <td>l/sec</td>
               </tr>
               <tr>
                 <td>Inaladores</td>
@@ -353,8 +353,84 @@
                                     </div>
                               </td>
                             </tr>
+                            <tr>
+                                <td>Linde</td>
+                                <td>
+                                  <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-default active">
+                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Não
+                                    </label>
+                                    <label class="btn btn-default">
+                                      <input type="radio" name="options" id="option2" autocomplete="off"> Sim
+                                    </label>
+                                  </div>
+                                </td>
+                                <td><input type="text" class="form-control" placeholder="débito"/></td>
+                                <td><input type="text" class="form-control" placeholder="nº horas"/></td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="">
+                                        <button type="button" class="btn btn-default">Garrafa</button>
+                                        <button type="button" class="btn btn-default">Liquido</button>
+                                        <button type="button" class="btn btn-default">Concentrador</button>
+                                        <button type="button" class="btn btn-default">POC</button>
+                                      </div>
+                                </td>
+                              </tr>
                           </tbody>
                       </table>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#dispositivos" href="#ventilacao">
+                    Ventilacao não invasiva</a>
+                  </h4>
+                </div>
+                <div id="ventilacao" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <table class="table">
+                          <tbody>
+                              <tr>
+                                  <td>Empresa</td>
+                                  <td>
+                                    <div class="btn-group" data-toggle="buttons">
+                                      <label class="btn btn-default active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> BIPAP
+                                      </label>
+                                      <label class="btn btn-default">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> BIPAP Auto
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td><input type="text" class="form-control" placeholder="IPAP"/></td>
+                                  <td><input type="text" class="form-control" placeholder="EPAP"/></td>
+                                  <td>
+                                      <div class="btn-group" role="group" aria-label="">
+                                          <button type="button" class="btn btn-default">Nasal</button>
+                                          <button type="button" class="btn btn-default">Facial</button>
+                                        </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td>
+                                      <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default active">
+                                          <input type="radio" name="options" id="option1" autocomplete="off" checked> CPAP
+                                        </label>
+                                        <label class="btn btn-default">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> CPAP Auto
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td><input type="text" class="form-control" placeholder="Pressão"/></td>
+                                    <td><input type="text" class="form-control" placeholder="N. horas"/></td>
+                                    <td><input type="text" class="form-control" placeholder="O2"/></td>
+                                  </tr>
+                          </tbody>
+                        </table>
                   </div>
                 </div>
               </div>
